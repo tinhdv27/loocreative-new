@@ -1,0 +1,133 @@
+.works {
+  width: 1300px;
+  margin: auto;
+  height: 100vh;
+  .show {
+    display: none;
+  }
+  &-title {
+    padding-block: 30px;
+    font-size: 16px;
+    font-family: "Montserrat-Bold";
+  }
+  &-tabs {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+    padding: 0;
+    font-family: "Montserrat-Medium";
+    li a {
+      color: #999;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #000;
+    }
+    li:not(:first-child) {
+      margin-left: 10px;
+    }
+    &-item.active a {
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      li:not(:first-child) {
+        margin-left: 0px;
+        padding: 5px;
+        // display: none;
+      }
+
+      li:first-child {
+        border: 1px solid #000;
+        padding: 5px;
+        cursor: pointer;
+        a {
+          color: #000;
+        }
+      }
+      li:active {
+        display: block;
+      }
+    }
+  }
+
+  &-list-cards {
+    display: grid;
+    grid-auto-rows: max-content;
+    justify-items: center;
+    grid-gap: 20px;
+    width: 100%;
+    min-height: 80%;
+    max-height: 80%;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    padding-right: 10px;
+    @media (min-width: 1920px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media (max-width: 1920px) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    @media (max-width: 1440px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 1080px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #000;
+  }
+}
+
+.box-footer {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  bottom: 0;
+  left: 15%;
+}
+.footer {
+  display: flex;
+  align-self: flex-end;
+  flex-direction: row;
+  list-style-type: none;
+  padding: 0;
+  li:not(:first-child) {
+    margin-left: 20px;
+  }
+  a {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #999;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #000;
+  }
+}
+.hidden-scroll-works {
+  position: fixed;
+  height: 200px;
+  width: 50px;
+  background-color: white;
+  right: 100px;
+  top: 400px;
+  z-index: 20;
+}

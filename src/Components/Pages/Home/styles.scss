@@ -1,0 +1,27 @@
+.fp-right {
+  // opacity: 0 !important;
+  position: fixed !important;
+  right: 100px !important;
+  transform: rotateY(180deg) !important;
+  z-index: 10 !important;
+  span {
+    background-color: #cdcdcd !important;
+    width: 7px !important;
+    height: 7px !important;
+    margin-top: -20px !important;
+    border-radius: 0 !important;
+    &:hover {
+      width: 30px !important;
+      left: 10px !important;
+      background-color: black !important;
+    }
+  }
+
+  .active {
+    left: 4px;
+    span {
+      width: 30px !important;
+      background-color: black !important;
+    }
+  }
+}

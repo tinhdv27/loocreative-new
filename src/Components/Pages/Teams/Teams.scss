@@ -1,0 +1,53 @@
+.teams {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -159.5px;
+  color: #fff;
+  padding: 0 313px;
+  animation-name: loading;
+  animation-duration: 0.5s;
+
+  &-title {
+    padding-top: 97px;
+    font-size: 80px;
+    font-family: "Montserrat-Bold";
+    text-align: center;
+    margin-bottom: 101px;
+    transition: all 0.2s;
+  }
+  &-content {
+    &-label {
+      font-size: 24px;
+      font-family: "Montserrat-Bold";
+    }
+    &-list {
+      list-style-type: none;
+      margin-top: 40px !important;
+      margin: 0;
+      padding: 0;
+      margin-left: 5px;
+      font-size: 12px;
+      font-family: "Montserrat-Medium";
+      li {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+  background-color: white;
+}

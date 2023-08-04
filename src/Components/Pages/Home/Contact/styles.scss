@@ -1,0 +1,135 @@
+.contact {
+  position: relative;
+  height: 100vh;
+  .contact-img {
+    img {
+      width: 100%;
+    }
+  }
+  .contact-container {
+    position: absolute;
+
+    top: 10%;
+    margin-left: 10%;
+    .contact-partner {
+      margin-bottom: 50px;
+      .title-head {
+        font-family: "Montserrat-Light";
+        display: block;
+        font-size: 17px;
+        font-weight: 700;
+        color: #fff;
+      }
+      .content-head {
+        font-family: "Montserrat-Light";
+        display: block;
+        font-size: 17px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 300px;
+      }
+      .title {
+        display: block;
+        font-size: 34px;
+        margin-bottom: 12px;
+        font-weight: 700;
+        color: #fff;
+        font-family: "Montserrat-Bold";
+      }
+      .content {
+        font-size: 14px;
+        color: #fff;
+        font-family: "Montserrat-Light";
+        margin-top: -10px;
+      }
+      .content-icon {
+        display: flex;
+        padding: 7px 10px;
+        width: 250px;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s;
+        .icon {
+          opacity: 0;
+        }
+        &:hover {
+          background-color: #fff;
+          span {
+            color: #cdcdcd;
+          }
+          .icon {
+            color: #000;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &-partner-learn-more {
+    a {
+      color: #928a8a !important;
+      font-size: 16px;
+      font-family: "Montserrat-Light";
+      &:hover {
+        color: #fff !important;
+      }
+    }
+  }
+
+  &-animation {
+    .contact-partner-title {
+      animation-name: historyTop;
+      animation-duration: 3s;
+    }
+    .contact-partner-content {
+      animation-name: historyRight;
+      animation-duration: 1.5s;
+      .content {
+        animation-name: historyTop2;
+        animation-duration: 2s;
+      }
+      .contact-partner-learn-more {
+        animation-name: historyRight;
+        animation-duration: 2s;
+      }
+    }
+  }
+}
+
+@keyframes historyTop {
+  0% {
+    transform: translateY(-700px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes historyRight {
+  0% {
+    margin-left: 1000px;
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes historyTop2 {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

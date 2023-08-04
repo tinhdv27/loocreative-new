@@ -1,0 +1,79 @@
+.slogan {
+  position: relative;
+  height: 100vh;
+  .slogan-container {
+    width: 100%;
+    .slogan-img {
+      img {
+        width: 100%;
+      }
+    }
+    .slogan-title {
+      position: absolute;
+      top: 10%;
+      z-index: 9;
+      width: 100%;
+      font-family: "Montserrat-Medium";
+      p {
+        display: block;
+        width: 100%;
+        color: #fff;
+        text-align: left;
+        margin-left: 250px;
+        width: 700px;
+        font-size: 14px;
+        height: 100%;
+      }
+    }
+    .slogan-content {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: "Montserrat-Bold";
+      z-index: 99;
+      width: 100%;
+      p {
+        font-weight: 700;
+        font-size: 126px !important;
+        color: #fff;
+        margin-bottom: 0px;
+        text-align: center;
+        line-height: 135px;
+      }
+    }
+  }
+  &-animation {
+    .slogan-title {
+      animation-name: topSlogan;
+      animation-duration: 1s;
+    }
+    .slogan-content {
+      animation-name: leftSlogan;
+      animation-duration: 2s;
+    }
+  }
+}
+
+@keyframes topSlogan {
+  0% {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes leftSlogan {
+  0% {
+    margin-left: -6000px;
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}

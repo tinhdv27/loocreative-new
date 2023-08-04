@@ -1,0 +1,93 @@
+.slider {
+  position: relative;
+  height: 100vh;
+  video {
+    width: 100%;
+  }
+  &-container {
+    position: absolute;
+    top: 226px;
+    left: 192px;
+  }
+  &-content {
+    &-look {
+      font-size: 90px;
+      color: #fff;
+      font-family: "Montserrat-ExtraLight";
+    }
+    &-view {
+      color: #a0a0a0;
+      margin-top: -102px;
+      margin-left: 3px;
+      font-size: 40px;
+      font-family: "Montserrat-ExtraLight";
+    }
+  }
+  &-lool {
+    &-1 {
+      margin-bottom: 0;
+      margin-top: 22px;
+    }
+    &-2 {
+      margin-top: -49px;
+    }
+  }
+  &-time {
+    color: #fff;
+    font-family: "Montserrat-ExtraLight";
+    &-title {
+      font-size: 26px;
+      margin-top: 70px;
+    }
+    &-detail {
+      font-size: 150px;
+      margin-top: -70px;
+    }
+  }
+
+  &-animation {
+    .slider-image {
+      animation-name: topAnimation;
+      animation-duration: 1s;
+    }
+    .slider-content-view {
+      animation-name: left2Animation;
+      animation-duration: 1.5s;
+    }
+    .slider-time {
+      animation-name: leftAnimation;
+      animation-duration: 1.5s;
+    }
+  }
+}
+
+@keyframes topAnimation {
+  0% {
+    margin-top: -1000px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+@keyframes leftAnimation {
+  0% {
+    margin-left: -2000px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+@keyframes left2Animation {
+  0% {
+    margin-left: -5000px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
